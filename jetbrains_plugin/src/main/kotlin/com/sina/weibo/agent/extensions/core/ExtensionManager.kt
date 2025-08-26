@@ -107,6 +107,7 @@ class ExtensionManager(private val project: Project) {
         return ArrayList<ExtensionProvider>().apply {
             add(RooExtensionProvider())
             add(ClineExtensionProvider())
+            add(com.sina.weibo.agent.extensions.plugin.kilo.KiloExtensionProvider())
         }
     }
     
