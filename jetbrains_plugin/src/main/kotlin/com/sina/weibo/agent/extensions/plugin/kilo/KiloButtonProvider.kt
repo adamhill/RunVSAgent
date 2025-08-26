@@ -147,7 +147,7 @@ class KiloButtonProvider : ExtensionButtonProvider {
         init {
             templatePresentation.icon = AllIcons.General.Settings
             templatePresentation.text = "Settings"
-            templatePresentation.description = "Setting"
+            templatePresentation.description = "Settings"
         }
 
         override fun actionPerformed(e: AnActionEvent) {
