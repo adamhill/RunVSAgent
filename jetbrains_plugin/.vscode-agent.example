@@ -1,7 +1,7 @@
 # Extension Configuration
 # This file controls which extension provider to use for this project
 
-# Extension type to use (cline, roo-code, custom-extension)
+# Extension type to use (cline, roo-code, kilo-code, custom-extension)
 extension.type=cline
 
 # Auto-switch enabled (true/false)
@@ -15,6 +15,10 @@ extension.cline.temperature=0.7
 extension.roo-code.api_key=${ROO_API_KEY}
 extension.roo-code.endpoint=https://api.roo.ai
 extension.roo-code.timeout=30000
+
+extension.kilo-code.api_key=${KILO_API_KEY}
+extension.kilo-code.model=sonnet-4
+extension.kilo-code.temperature=0.6
 
 # Debug mode (all, idea, release, none)
 debug.mode=none

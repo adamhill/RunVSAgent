@@ -150,7 +150,7 @@ class ExtensionConfigurationManager(private val project: Project) {
             listOf(
                 "1. Check if ${PluginConstants.ConfigFiles.MAIN_CONFIG_FILE} file exists in project root",
                 "2. Ensure '${PluginConstants.ConfigFiles.EXTENSION_TYPE_KEY}' property is set to a valid extension ID",
-                "3. Valid extension types: roo-code, cline, custom",
+                "3. Valid extension types: roo-code, cline, kilo-code, custom",
                 "4. Try running 'createDefaultConfiguration()' to generate a template",
                 "5. Check file permissions and ensure the file is readable"
             )

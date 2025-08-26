@@ -161,6 +161,7 @@ object ConfigFileUtils {
         properties.setProperty("# Available extension types:", "")
         properties.setProperty("# - roo-code: Roo Code extension", "")
         properties.setProperty("# - cline: Cline AI extension", "")
+        properties.setProperty("# - kilo-code: Kilo-code AI extension", "")
         properties.setProperty("# - custom: Custom extension", "")
         
         saveMainConfig(properties, "RunVSAgent Extension Configuration - Default Template")
