@@ -19,6 +19,11 @@ RunVSAgent is an innovative cross-platform development tool that enables develop
 - **VSCode Agent Compatibility**: Seamlessly run VSCode-based coding agents in JetBrains IDEs
 - **Cross-IDE Development**: Unified agent experience across different IDE platforms
 
+## 🤖 Supported Agents
+
+- **[Roo Code](https://roocode.com)**: Advanced AI-powered coding assistant with intelligent code generation and refactoring capabilities
+- **[Cline](https://cline.bot)**: Autonomous coding agent right in your IDE, capable of creating/editing files, executing commands, using the browser, and more with your permission every step of the way.
+
 ## 🔧 Supported IDEs
 
 ### Jetbrains IDEs
@@ -37,13 +42,6 @@ RunVSAgent currently supports the following JetBrains IDE series:
 
 > **Note**: Requires JetBrains IDE version 2023.1 or later for optimal compatibility.
 
-### XCode IDE
-Working on it...
-
-## 🤖 Supported Agents
-
-- **[Roo Code](https://roocode.com)**: Advanced AI-powered coding assistant with intelligent code generation and refactoring capabilities
-- **[Cline](https://cline.bot)**: Autonomous coding agent right in your IDE, capable of creating/editing files, executing commands, using the browser, and more with your permission every step of the way.
 
 ## 🏗️ Architecture
 

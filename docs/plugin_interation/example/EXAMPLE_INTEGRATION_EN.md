@@ -31,7 +31,7 @@ graph TD
         CLP[ClineExtensionProvider<br/>initialize/isAvailable/getConfiguration]
     end
 
-    subgraph Core[Core Extension System (VSCode Compatibility Layer)]
+    subgraph Core["Core Extension System (VSCode Compatibility Layer)"]
         CEM[core/ExtensionManager<br/>register/activate]
         RPC[JSON-RPC / IPC]
         EXTH[ExtHostExtensionService.activate]

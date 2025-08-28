@@ -19,6 +19,11 @@ RunVSAgent 是一个创新的跨平台开发工具，使开发者能够在 JetBr
 - **VSCode 代理兼容性**：在 JetBrains IDEs 中无缝运行基于 VSCode 的编码代理
 - **跨 IDE 开发**：在不同 IDE 平台上提供统一的代理体验
 
+## 🤖 支持的代理
+
+- **[Roo Code](https://roocode.com)**：具有智能代码生成和重构功能的高级 AI 驱动编码助手
+- **[Cline](https://cline.bot)**: 一个就在你 IDE 里的自主编码代理，在你的许可下，能够创建/编辑文件、执行命令、使用浏览器等更多功能，并在每一步都征求你的确认。
+
 ## 🔧 支持的 IDE
 
 ### JetBrains IDEs
@@ -37,13 +42,6 @@ RunVSAgent 目前支持以下 JetBrains IDE 系列：
 
 > **注意**：为了获得最佳兼容性，需要 JetBrains IDE 版本 2023.1 或更高版本。
 
-### XCode IDE
-正在开发中...
-
-## 🤖 支持的代理
-
-- **[Roo Code](https://roocode.com)**：具有智能代码生成和重构功能的高级 AI 驱动编码助手
-- **[Cline](https://cline.bot)**: 一个就在你 IDE 里的自主编码代理，在你的许可下，能够创建/编辑文件、执行命令、使用浏览器等更多功能，并在每一步都征求你的确认。
 
 ## 🏗️ 架构
 
