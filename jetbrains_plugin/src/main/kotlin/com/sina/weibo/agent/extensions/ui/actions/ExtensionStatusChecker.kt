@@ -19,6 +19,11 @@ import com.sina.weibo.agent.core.PluginContext
 import com.sina.weibo.agent.core.ServiceProxyRegistry
 import com.sina.weibo.agent.util.ProxyConfigUtil
 import com.sina.weibo.agent.webview.WebViewManager
+import com.intellij.ide.plugins.PluginManagerCore
+import com.intellij.openapi.extensions.PluginId
+import com.intellij.ui.jcef.JBCefApp
+import com.intellij.openapi.application.ApplicationInfo
+import com.sina.weibo.agent.util.PluginConstants
 
 /**
  * Action to check extension status and diagnose issues
@@ -38,6 +43,9 @@ class ExtensionStatusChecker : AnAction("Check Extension Status") {
         val sb = StringBuilder()
         sb.appendLine("🔍 Extension Status Check")
         sb.appendLine("=".repeat(50))
+        
+        // Add System Information
+        addSystemInformation(sb)
         
         // Check Extension Manager
         try {
@@ -140,6 +148,43 @@ class ExtensionStatusChecker : AnAction("Check Extension Status") {
         }
         
         return sb.toString()
+    }
+    
+    /**
+     * Add system information to the status report
+     */
+    private fun addSystemInformation(sb: StringBuilder) {
+        try {
+            val appInfo = ApplicationInfo.getInstance()
+            val plugin = PluginManagerCore.getPlugin(PluginId.getId(PluginConstants.PLUGIN_ID))
+            val pluginVersion = plugin?.version ?: "unknown"
+            val osName = System.getProperty("os.name")
+            val osVersion = System.getProperty("os.version")
+            val osArch = System.getProperty("os.arch")
+            val jcefSupported = JBCefApp.isSupported()
+            
+            // Check for Linux ARM system
+            val isLinuxArm = osName.lowercase().contains("linux") && (osArch.lowercase().contains("aarch64") || osArch.lowercase().contains("arm"))
+            
+            sb.appendLine("\n📊 System Information:")
+            sb.appendLine("  💻 CPU Architecture: $osArch")
+            sb.appendLine("  🖥️ Operating System: $osName $osVersion")
+            sb.appendLine("  🔧 IDE Version: ${appInfo.fullApplicationName} (build ${appInfo.build})")
+            sb.appendLine("  📦 Plugin Version: $pluginVersion")
+            sb.appendLine("  🌐 JCEF Support: ${if (jcefSupported) "✅ Yes" else "❌ No"}")
+            
+            // Add warnings for unsupported configurations
+            if (isLinuxArm) {
+                sb.appendLine("  ⚠️ Warning: Linux ARM systems are currently not supported")
+            }
+            
+            if (!jcefSupported) {
+                sb.appendLine("  ❌ Warning: JCEF not supported - WebView functionality may not work")
+            }
+            
+        } catch (e: Exception) {
+            sb.appendLine("\n❌ System Information Error: ${e.message}")
+        }
     }
     
     private fun showStatusDialog(status: String) {

@@ -39,7 +39,6 @@ object PluginResourceUtil {
             val plugin = PluginManagerCore.getPlugin(PluginId.getId(pluginId))
                 ?: throw IllegalStateException("Cannot find plugin: $pluginId")
 
-            LOG.info("Get plugin version: ${plugin.version}")
             // Determine whether it is development mode or production mode
             val isDevMode = checkDevMode(plugin)
 
